@@ -1,0 +1,17 @@
+[
+    {
+        content: 'Great post!',
+        user_id: 2,
+        post_id: 1
+    },
+    {
+        content: 'Thanks for sharing this.',
+        user_id: 3,
+        post_id: 2
+    },
+    {
+        content: 'I love using Handlebars.',
+        user_id: 2,
+        post_id: 3
+    }
+]
