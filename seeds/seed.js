@@ -2,9 +2,9 @@ const sequelize = require('../config/connection');
 const { User, Post, Comment } = require('../models');
 
 // Update imports to use .js files
-const userData = require('./userData.js');
-const postData = require('./postData.js');
-const commentData = require('./commentData.js');
+const userData = require('./userData.json');
+const postData = require('./postData.json');
+const commentData = require('./commentData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -18,7 +18,6 @@ const seedDatabase = async () => {
     await Post.create({
       ...post,
       user_id: users.find((user) => user.dataValues.username === post.user_id)
-        .id,
     });
   }
 
